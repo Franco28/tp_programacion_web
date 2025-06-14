@@ -1,0 +1,372 @@
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(180deg, #0a1931 0%, #061224 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #ffffff;
+  overflow-x: hidden;
+  margin: 0;
+  padding-top: 4rem;
+}
+
+/* Navbar fijo */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #111111;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  z-index: 999;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-right {
+  font-size: 1.2rem;
+  margin-left: 1rem;
+  color: #ffffff;
+}
+
+.nav-links {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Links y efecto de linea */
+.nav-links a {
+  position: relative;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 1rem;
+  font-weight: 600;
+}
+
+/* subrayado animado */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #ccff00;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 80%;
+  left: 10%;
+}
+
+/* Logo */
+.logo {
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-left: 0.75rem;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
+.hero h1 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 4rem;
+  color: #ccff00;
+  margin-bottom: 0.5rem;
+}
+
+.hero h2 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 2rem;
+  color: #ccff00;
+  margin-bottom: 0.5rem;
+}
+
+.hero h3 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 2.5rem;
+  color: #ccff00;
+}
+
+/* Contenido principal */
+.content {
+  max-width: 1100px;
+  margin: 2rem auto;
+}
+
+.content h1 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 4rem;
+  color: #ccff00;
+  margin-bottom: 0.5rem;
+}
+
+/* Spotify + album */
+.discos-section {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.album-section {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  flex-wrap: nowrap;
+}
+
+/* Hover imagen */
+.imagen-hover {
+  position: relative;
+  display: inline-block;
+}
+
+.imagen-hover img {
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.hover-fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 4px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.imagen-hover:hover .hover-fondo {
+  opacity: 1;
+}
+
+/* Hover imagen - lista */
+.lista-discos h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #ccff00;
+  letter-spacing: 1px;
+}
+
+.album-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.album-lista li {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.album-lista li:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.album-lista a {
+  color: white;
+  text-decoration: none;
+}
+
+.album-lista a:hover {
+  height: 2px;
+  text-decoration: underline;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.spotifyiframe,
+.album-image {
+  width: 50%;
+  flex-shrink: 0;
+}
+
+.spotifyiframe {
+  background: #111111;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.iframe-embebido {
+  height: 100%;
+}
+
+.iframe-embebido iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* video */
+.videos-section {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.videos-section h2 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.video-iframe {
+  padding: 0;
+  border-radius: 4px;
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.video-iframe iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* giras */
+.giras-section {
+  border-radius: 8px;
+}
+
+.giras-section h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: #ccff00;
+  text-align: center;
+}
+
+.gira-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.gira-lista li {
+  margin: 1rem 0;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.gira-lista li:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+.gira-lista strong {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.gira-lista em {
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.gira-lista a {
+  color: #ccff00;
+  text-decoration: none;
+}
+
+.gira-lista a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+  background: #061224;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.footer h2 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ccff00;
+}
+
+.iconos-redes {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer p {
+  color: #777777;
+  font-size: 0.9rem;
+}
+
+.footer a {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.footer a:hover {
+  transform: scale(1.2);
+}
