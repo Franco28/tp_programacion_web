@@ -76,7 +76,6 @@ body {
 
 /* Logo */
 .logo {
-  font-family: "Bebas Neue", cursive;
   font-size: 1.5rem;
   color: #ffffff;
   margin-left: 0.75rem;
@@ -113,21 +112,18 @@ body {
 }
 
 .hero h1 {
-  font-family: "Bebas Neue", cursive;
   font-size: 4rem;
   color: #ccff00;
   margin-bottom: 0.5rem;
 }
 
 .hero h2 {
-  font-family: "Bebas Neue", cursive;
   font-size: 2rem;
   color: #ccff00;
   margin-bottom: 0.5rem;
 }
 
 .hero h3 {
-  font-family: "Bebas Neue", cursive;
   font-size: 2.5rem;
   color: #ccff00;
 }
@@ -139,7 +135,6 @@ body {
 }
 
 .content h1 {
-  font-family: "Bebas Neue", cursive;
   font-size: 4rem;
   color: #ccff00;
   margin-bottom: 0.5rem;
@@ -262,7 +257,6 @@ body {
 }
 
 .videos-section h2 {
-  font-family: "Bebas Neue", cursive;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
@@ -344,7 +338,6 @@ body {
 }
 
 .footer h2 {
-  font-family: "Bebas Neue", cursive;
   font-size: 2rem;
   margin-bottom: 1rem;
   color: #ccff00;
